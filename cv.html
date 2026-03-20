@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Credentials, competencies and professional background of Samkelo Breakfast — Marketing & Corporate Communications Specialist.">
+    <meta name="author" content="Samkelo Breakfast">
+    <meta name="keywords" content="marketing strategist, corporate communications, brand strategy, Johannesburg, South Africa, digital marketing">
+    <!-- Open Graph — controls how the link looks when shared on LinkedIn/WhatsApp -->
+    <meta property="og:title" content="Profile | Samkelo Breakfast">
+    <meta property="og:description" content="Credentials, competencies and professional background of Samkelo Breakfast — Marketing & Corporate Communications Specialist.">
+    <meta property="og:image" content="Cv_SB.jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_ZA">
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Profile | Samkelo Breakfast">
+    <meta name="twitter:description" content="Credentials, competencies and professional background of Samkelo Breakfast — Marketing & Corporate Communications Specialist.">
+    <title>Profile | Samkelo Breakfast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ═══════════════════════════════════════════
+           PETRA SYSTEM — consistent across all pages
+        ═══════════════════════════════════════════ */
+        :root {
+            --petra-void:      #1a0d0c;
+            --petra-deep:      #5C2018;
+            --petra-mid:       #BC4639;
+            --petra-dust:      #e8c8be;
+            --petra-parchment: #f8f0eb;
+            --petra-gold:      #c8903a;
+
+            --glass-light:     rgba(243, 224, 220, 0.07);
+            --glass-mid:       rgba(243, 224, 220, 0.12);
+            --glass-border:    rgba(243, 224, 220, 0.18);
+            --glass-border-bright: rgba(212, 165, 154, 0.38);
+
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body:    'Outfit', sans-serif;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--petra-void);
+            color: var(--petra-parchment);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                linear-gradient(
+                    160deg,
+                    rgba(26,13,12,0.62), rgba(92,32,24,0.52), rgba(26,13,12,0.68)
+                ),
+                url('Cv_SB.jpeg') center center / cover no-repeat fixed;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Petra warmth veil + strata over the photo */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 20% 10%, rgba(188, 70, 57, 0.18) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 80% at 80% 90%, rgba(188, 70, 57, 0.12) 0%, transparent 60%),
+                repeating-linear-gradient(
+                    175deg,
+                    transparent,
+                    transparent 18px,
+                    rgba(212, 165, 154, 0.025) 18px,
+                    rgba(212, 165, 154, 0.025) 19px
+                );
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ═══════════════════════════════════════════
+           NAV
+        ═══════════════════════════════════════════ */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            padding: 18px 48px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(26,13,12,0.55);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-monogram {
+            font-family: var(--font-display);
+            font-size: 1.6rem; font-weight: 300;
+            color: var(--petra-dust); letter-spacing: 4px;
+            text-decoration: none;
+        }
+        .nav-monogram strong { color: var(--petra-mid); font-weight: 600; }
+
+        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links a {
+            font-size: 0.7rem; font-weight: 400; letter-spacing: 3px;
+            text-transform: uppercase; color: var(--petra-dust);
+            text-decoration: none; opacity: 0.7; transition: color 0.3s, opacity 0.3s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 1px; background: var(--petra-mid);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--petra-parchment); opacity: 1; }
+        .nav-links a.active::after, .nav-links a:hover::after { width: 100%; }
+
+        /* ═══════════════════════════════════════════
+           PAGE LAYOUT
+        ═══════════════════════════════════════════ */
+        .page-wrap {
+            position: relative; z-index: 1;
+            max-width: 1400px; margin: 0 auto;
+            padding: 120px 48px 100px;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+
+        /* ═══════════════════════════════════════════
+           SIDEBAR — Profile Card
+        ═══════════════════════════════════════════ */
+        .sidebar {
+            position: sticky;
+            top: 90px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .glass-panel {
+            background: rgba(20, 10, 9, 0.58);
+            backdrop-filter: blur(24px) saturate(120%);
+            -webkit-backdrop-filter: blur(24px) saturate(120%);
+            border: 1px solid var(--glass-border);
+            border-radius: 4px;
+            padding: 40px 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-panel::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--petra-dust), transparent);
+            opacity: 0.4;
+        }
+
+        /* Profile photo */
+        .profile-photo-wrap {
+            position: relative;
+            width: 140px; height: 140px;
+            margin: 0 auto 28px;
+        }
+
+        .profile-photo {
+            width: 140px; height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(30%);
+            transition: filter 0.6s;
+            border: 1px solid var(--glass-border-bright);
+        }
+
+        .profile-photo:hover { filter: grayscale(0%); }
+
+        /* Spinning ring */
+        .profile-photo-wrap::after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            border-top-color: var(--petra-mid);
+            border-right-color: var(--petra-mid);
+            animation: spin-ring 8s linear infinite;
+        }
+
+        @keyframes spin-ring {
+            to { transform: rotate(360deg); }
+        }
+
+        .profile-name {
+            font-family: var(--font-display);
+            font-size: 1.6rem; font-weight: 600;
+            color: var(--petra-parchment);
+            text-align: center; margin-bottom: 4px;
+        }
+
+        .profile-title {
+            font-size: 0.65rem; font-weight: 300;
+            letter-spacing: 3px; text-transform: uppercase;
+            color: var(--petra-dust); opacity: 0.7;
+            text-align: center; margin-bottom: 28px;
+        }
+
+        /* Stats row */
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 14px 8px;
+            background: rgba(188, 70, 57, 0.08);
+            border: 1px solid rgba(188, 70, 57, 0.2);
+            border-radius: 3px;
+        }
+
+        .stat-box strong {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 1.3rem; font-weight: 600;
+            color: var(--petra-mid);
+            margin-bottom: 2px;
+        }
+
+        .stat-box span {
+            font-size: 0.52rem; font-weight: 400;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            color: var(--petra-dust); opacity: 0.65;
+        }
+
+        /* CTA Buttons */
+        .btn-primary {
+            display: block; width: 100%;
+            padding: 15px 20px;
+            background: var(--petra-mid);
+            color: var(--petra-parchment);
+            border: none; border-radius: 2px;
+            font-family: var(--font-body);
+            font-size: 0.65rem; font-weight: 600;
+            letter-spacing: 2.5px; text-transform: uppercase;
+            cursor: pointer; text-decoration: none;
+            text-align: center;
+            transition: background 0.3s, box-shadow 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .btn-primary:hover {
+            background: var(--petra-deep);
+            box-shadow: 0 8px 24px rgba(188, 70, 57, 0.3);
+        }
+
+        .btn-ghost {
+            display: block; width: 100%;
+            padding: 13px 20px;
+            background: transparent;
+            color: var(--petra-dust);
+            border: 1px solid var(--glass-border-bright);
+            border-radius: 2px;
+            font-size: 0.65rem; font-weight: 400;
+            letter-spacing: 2.5px; text-transform: uppercase;
+            cursor: pointer; text-decoration: none;
+            text-align: center;
+            transition: background 0.3s, color 0.3s, border-color 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .btn-ghost:hover {
+            background: var(--glass-mid);
+            border-color: var(--petra-dust);
+            color: var(--petra-parchment);
+        }
+
+        /* Credential vault */
+        .vault-label {
+            font-size: 0.58rem; font-weight: 600;
+            letter-spacing: 3px; text-transform: uppercase;
+            color: var(--petra-mid); opacity: 0.8;
+            text-align: center; margin-bottom: 14px;
+        }
+
+        .vault-item {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 12px 16px;
+            background: transparent;
+            border: 1px solid var(--glass-border);
+            border-radius: 2px;
+            font-size: 0.65rem; font-weight: 400;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            color: var(--petra-dust);
+            cursor: pointer; width: 100%;
+            transition: border-color 0.3s, background 0.3s, color 0.3s;
+            margin-bottom: 8px;
+        }
+
+        .vault-item:hover {
+            border-color: var(--petra-mid);
+            background: rgba(188, 70, 57, 0.06);
+            color: var(--petra-parchment);
+        }
+
+        .vault-item .lock { font-size: 0.7rem; opacity: 0.5; }
+
+        /* Location pill */
+        .location-pill {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 10px;
+            font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase;
+            color: var(--petra-dust); opacity: 0.5;
+            border-top: 1px solid var(--glass-border);
+            margin-top: 4px;
+        }
+
+        /* ═══════════════════════════════════════════
+           MAIN CONTENT
+        ═══════════════════════════════════════════ */
+        .content-col {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* Section block */
+        .cv-section {
+            background: rgba(20, 10, 9, 0.58);
+            backdrop-filter: blur(24px) saturate(120%);
+            -webkit-backdrop-filter: blur(24px) saturate(120%);
+            border: 1px solid var(--glass-border);
+            border-radius: 4px;
+            padding: 44px 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cv-section::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--petra-dust), transparent);
+            opacity: 0.3;
+        }
+
+        .section-eyebrow {
+            font-size: 0.58rem; font-weight: 600;
+            letter-spacing: 4px; text-transform: uppercase;
+            color: var(--petra-mid); margin-bottom: 10px;
+        }
+
+        .section-heading {
+            font-family: var(--font-display);
+            font-size: 2rem; font-weight: 600;
+            color: var(--petra-parchment);
+            margin-bottom: 28px;
+            line-height: 1.1;
+        }
+
+        /* Pull quote */
+        .pull-quote {
+            border-left: 2px solid var(--petra-mid);
+            padding: 20px 28px;
+            margin-bottom: 28px;
+            background: rgba(188, 70, 57, 0.06);
+            border-radius: 0 3px 3px 0;
+        }
+
+        .pull-quote p {
+            font-family: var(--font-display);
+            font-size: 1.2rem; font-weight: 300;
+            font-style: italic;
+            color: var(--petra-parchment);
+            line-height: 1.6;
+        }
+
+        .body-text {
+            font-size: 0.88rem; font-weight: 300;
+            line-height: 1.85;
+            color: var(--petra-dust);
+            opacity: 0.9;
+        }
+
+        /* Competency grid */
+        .competency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        .competency-group h4 {
+            font-size: 0.6rem; font-weight: 600;
+            letter-spacing: 3px; text-transform: uppercase;
+            color: var(--petra-mid); margin-bottom: 14px;
+        }
+
+        .competency-group ul { list-style: none; }
+
+        .competency-group li {
+            font-size: 0.82rem; font-weight: 300;
+            color: var(--petra-dust);
+            padding: 8px 0;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex; align-items: center; gap: 10px;
+        }
+
+        .competency-group li::before {
+            content: '◈';
+            font-size: 0.5rem;
+            color: var(--petra-mid);
+            flex-shrink: 0;
+        }
+
+        /* Experience timeline */
+        .timeline { display: flex; flex-direction: column; gap: 0; }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 0 32px;
+            padding: 28px 0;
+            border-bottom: 1px solid var(--glass-border);
+            position: relative;
+        }
+
+        .timeline-item:last-child { border-bottom: none; }
+
+        .timeline-meta {
+            padding-top: 3px;
+        }
+
+        .timeline-date {
+            font-size: 0.62rem; font-weight: 400;
+            letter-spacing: 2px; text-transform: uppercase;
+            color: var(--petra-mid); margin-bottom: 6px;
+        }
+
+        .timeline-org {
+            font-size: 0.72rem; font-weight: 300;
+            color: var(--petra-dust); opacity: 0.6;
+            letter-spacing: 0.5px;
+        }
+
+        .timeline-role {
+            font-family: var(--font-display);
+            font-size: 1.25rem; font-weight: 600;
+            color: var(--petra-parchment);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .timeline-desc {
+            font-size: 0.8rem; font-weight: 300;
+            line-height: 1.8; color: var(--petra-dust);
+            opacity: 0.8; margin-bottom: 12px;
+        }
+
+        .timeline-tags {
+            display: flex; flex-wrap: wrap; gap: 6px;
+        }
+
+        .tag-chip {
+            padding: 4px 12px;
+            font-size: 0.55rem; font-weight: 400;
+            letter-spacing: 2px; text-transform: uppercase;
+            color: var(--petra-dust);
+            border: 1px solid var(--glass-border);
+            border-radius: 2px;
+        }
+
+        /* Education block */
+        .edu-item {
+            display: flex; gap: 24px;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--glass-border);
+            align-items: flex-start;
+        }
+
+        .edu-item:last-child { border-bottom: none; }
+
+        .edu-icon {
+            width: 44px; height: 44px;
+            background: rgba(188, 70, 57, 0.1);
+            border: 1px solid rgba(188, 70, 57, 0.25);
+            border-radius: 3px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; flex-shrink: 0;
+        }
+
+        .edu-degree {
+            font-family: var(--font-display);
+            font-size: 1.2rem; font-weight: 600;
+            color: var(--petra-parchment); margin-bottom: 4px;
+        }
+
+        .edu-inst {
+            font-size: 0.75rem; font-weight: 300;
+            color: var(--petra-dust); opacity: 0.7;
+            letter-spacing: 1px; margin-bottom: 4px;
+        }
+
+        .edu-year {
+            font-size: 0.6rem; font-weight: 400;
+            letter-spacing: 2px; text-transform: uppercase;
+            color: var(--petra-mid);
+        }
+
+        /* Skills bar */
+        .skills-list { display: flex; flex-direction: column; gap: 16px; }
+
+        .skill-row { display: flex; flex-direction: column; gap: 6px; }
+
+        .skill-header {
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        .skill-name {
+            font-size: 0.72rem; font-weight: 400;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            color: var(--petra-dust);
+        }
+
+        .skill-pct {
+            font-size: 0.62rem; font-weight: 300;
+            color: var(--petra-mid);
+        }
+
+        .skill-track {
+            height: 2px;
+            background: rgba(212, 165, 154, 0.15);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--petra-deep), var(--petra-mid));
+            border-radius: 2px;
+            transform-origin: left;
+            animation: skill-grow 1.2s ease forwards;
+            transform: scaleX(0);
+        }
+
+        @keyframes skill-grow {
+            to { transform: scaleX(1); }
+        }
+
+        /* ═══════════════════════════════════════════
+           MODAL — Password-protected transcripts
+        ═══════════════════════════════════════════ */
+        .modal-overlay {
+            display: none;
+            position: fixed; inset: 0; z-index: 9000;
+            background: rgba(26, 13, 12, 0.92);
+            backdrop-filter: blur(16px);
+            align-items: center; justify-content: center;
+        }
+
+        .modal-overlay.open { display: flex; }
+
+        .modal-box {
+            background: rgba(20, 10, 9, 0.58);
+            backdrop-filter: blur(24px);
+            border: 1px solid var(--glass-border-bright);
+            border-radius: 4px;
+            padding: 52px;
+            width: 90%; max-width: 440px;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute; top: 20px; right: 24px;
+            background: none; border: none;
+            font-size: 1.4rem; color: var(--petra-dust);
+            cursor: pointer; opacity: 0.5;
+            transition: opacity 0.2s;
+        }
+        .modal-close:hover { opacity: 1; }
+
+        .modal-icon { font-size: 2rem; margin-bottom: 20px; }
+
+        .modal-title {
+            font-family: var(--font-display);
+            font-size: 1.6rem; font-weight: 600;
+            color: var(--petra-parchment); margin-bottom: 8px;
+        }
+
+        .modal-sub {
+            font-size: 0.7rem; font-weight: 300;
+            letter-spacing: 2px; text-transform: uppercase;
+            color: var(--petra-dust); opacity: 0.6;
+            margin-bottom: 32px;
+        }
+
+        .modal-input {
+            width: 100%;
+            background: rgba(26, 13, 12, 0.4);
+            border: 1px solid var(--glass-border-bright);
+            border-radius: 2px;
+            padding: 15px 20px;
+            font-family: var(--font-body);
+            font-size: 1rem; letter-spacing: 6px;
+            color: var(--petra-parchment);
+            text-align: center;
+            outline: none;
+            transition: border-color 0.3s;
+            margin-bottom: 16px;
+        }
+
+        .modal-input:focus { border-color: var(--petra-mid); }
+        .modal-input::placeholder { letter-spacing: 2px; opacity: 0.3; }
+
+        .modal-error {
+            font-size: 0.65rem; letter-spacing: 1.5px;
+            text-transform: uppercase; color: var(--petra-mid);
+            margin-bottom: 12px; min-height: 18px;
+        }
+
+        /* PDF viewer modal */
+        .pdf-modal {
+            display: none;
+            position: fixed; inset: 0; z-index: 9000;
+            background: rgba(26, 13, 12, 0.95);
+            backdrop-filter: blur(16px);
+            flex-direction: column;
+        }
+
+        .pdf-modal.open { display: flex; }
+
+        .pdf-toolbar {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 16px 32px;
+            background: rgba(26, 13, 12, 0.8);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .pdf-title {
+            font-size: 0.65rem; letter-spacing: 3px;
+            text-transform: uppercase; color: var(--petra-dust);
+        }
+
+        .pdf-close {
+            background: none; border: 1px solid var(--glass-border);
+            color: var(--petra-dust); padding: 8px 20px;
+            font-size: 0.6rem; letter-spacing: 2px;
+            text-transform: uppercase; cursor: pointer;
+            border-radius: 2px; transition: border-color 0.3s, color 0.3s;
+        }
+
+        .pdf-close:hover { border-color: var(--petra-mid); color: var(--petra-parchment); }
+
+        .pdf-frame {
+            flex: 1;
+            border: none;
+            width: 100%;
+        }
+
+        /* ═══════════════════════════════════════════
+           TICKER + FOOTER
+        ═══════════════════════════════════════════ */
+        .ticker-wrap {
+            position: relative; z-index: 1;
+            width: 100%; overflow: hidden;
+            padding: 20px 0;
+            background: linear-gradient(90deg, var(--petra-deep), #3d1410, var(--petra-deep));
+            border-top: 1px solid rgba(188, 70, 57, 0.3);
+            border-bottom: 1px solid rgba(188, 70, 57, 0.3);
+        }
+        .ticker-wrap::before, .ticker-wrap::after {
+            content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none;
+        }
+        .ticker-wrap::before { left: 0;  background: linear-gradient(90deg,  var(--petra-deep), transparent); }
+        .ticker-wrap::after  { right: 0; background: linear-gradient(-90deg, var(--petra-deep), transparent); }
+        .ticker-move { display: flex; white-space: nowrap; width: max-content; animation: ticker-scroll 55s linear infinite; }
+        .ticker-item { padding: 0 70px; font-size: 0.65rem; font-weight: 300; letter-spacing: 3.5px; text-transform: uppercase; color: var(--petra-dust); }
+        .ticker-item em { color: var(--petra-mid); font-style: normal; font-weight: 600; }
+        @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        footer {
+            position: relative; z-index: 1;
+            padding: 40px 48px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(26,13,12,0.6);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid var(--glass-border);
+        }
+        .footer-brand { font-family: var(--font-display); font-size: 1.1rem; font-weight: 300; letter-spacing: 4px; color: var(--petra-dust); font-style: italic; text-decoration: none; }
+        .footer-brand strong { color: var(--petra-mid); font-weight: 600; font-style: normal; }
+        .footer-copy { font-size: 0.6rem; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; color: var(--petra-dust); opacity: 0.5; }
+        .footer-links { display: flex; gap: 32px; list-style: none; }
+        .footer-links a { font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; color: var(--petra-dust); text-decoration: none; opacity: 0.5; transition: opacity 0.3s, color 0.3s; }
+        .footer-links a:hover { opacity: 1; color: var(--petra-mid); }
+
+        /* ═══════════════════════════════════════════
+           ANIMATIONS
+        ═══════════════════════════════════════════ */
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .sidebar     { animation: fade-up 0.8s 0.2s both; }
+        .content-col { animation: fade-up 0.8s 0.4s both; }
+
+        /* ═══════════════════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════════════════ */
+        @media (max-width: 1100px) {
+            .page-wrap { grid-template-columns: 1fr; padding: 100px 24px 80px; }
+            .sidebar { position: static; max-width: 480px; margin: 0 auto; width: 100%; }
+        }
+        @media (max-width: 768px) {
+            nav { padding: 16px 24px; }
+            .nav-links { gap: 20px; }
+            .cv-section { padding: 32px 24px; }
+            .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+            .timeline-meta { display: flex; gap: 16px; align-items: center; }
+            footer { flex-direction: column; gap: 14px; text-align: center; padding: 28px 24px; }
+            .footer-links { justify-content: center; }
+        }
+        @media (max-width: 500px) {
+            .nav-links { display: none; }
+            .competency-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="index.html" class="nav-monogram"><strong>SB</strong> &nbsp;Breakfast</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Identity</a></li>
+            <li><a href="cv.html" class="active">Profile</a></li>
+            <li><a href="portfolio.html">Impact</a></li>
+            <li><a href="contact.html">Connect</a></li>
+        </ul>
+    </nav>
+
+    <!-- PAGE -->
+    <div class="page-wrap">
+
+        <!-- ── SIDEBAR ── -->
+        <aside class="sidebar">
+
+            <div class="glass-panel">
+                <div class="profile-photo-wrap">
+                    <img src="Image sb.jpeg" alt="Samkelo Breakfast" class="profile-photo">
+                </div>
+                <h2 class="profile-name">Samkelo Breakfast</h2>
+                <p class="profile-title">Marketing & Communications Specialist</p>
+
+                <div class="stat-row">
+                    <div class="stat-box"><strong>3+</strong><span>Years Exp.</span></div>
+                    <div class="stat-box"><strong>BA</strong><span>Hons Equiv.</span></div>
+                    <div class="stat-box"><strong>JHB</strong><span>Based</span></div>
+                </div>
+
+                <button onclick="openPDF('Samkelo_Breakfast_CV.pdf','Executive CV — Samkelo Breakfast')" class="btn-primary">Preview Executive CV</button>
+                <a href="contact.html" class="btn-ghost">Open to Opportunities</a>
+            </div>
+
+            <div class="glass-panel">
+                <p class="vault-label">Credential Vault</p>
+                <button class="vault-item" onclick="openPDF('Bachelor_of_Arts_Integrated.pdf', 'Degree Certificate')">
+                    Degree Certificate <span>↗</span>
+                </button>
+                <button class="vault-item" onclick="openPDF('Black White Simple Minimalist Cover Letter (1).pdf', 'Cover Letter')">
+                    Cover Letter <span>↗</span>
+                </button>
+                <button class="vault-item" onclick="openSecure('Samkelo Breakfast Academic Transcript UFS.pdf', 'Academic Transcripts')">
+                    Academic Transcripts <span class="lock">🔒</span>
+                </button>
+                <div class="location-pill">◎ &nbsp; Johannesburg, South Africa</div>
+            </div>
+
+        </aside>
+
+        <!-- ── MAIN CONTENT ── -->
+        <div class="content-col">
+
+            <!-- SUMMARY -->
+            <div class="cv-section">
+                <p class="section-eyebrow">Overview</p>
+                <h2 class="section-heading">Professional Summary</h2>
+                <div class="pull-quote">
+                    <p>"Effective communication is the bridge between brand value and consumer trust — build it with precision, cross it with purpose."</p>
+                </div>
+                <p class="body-text">
+                    A results-oriented Marketing and Communications professional with a BA in Integrated Organisational Communication from the University of the Free State (2023). I operate at the intersection of brand strategy, digital content, and stakeholder engagement — translating business objectives into communication frameworks that drive measurable outcomes. My practice is grounded in data-informed decision-making, creative execution, and cross-functional collaboration across corporate, non-profit, and agency environments.
+                </p>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="cv-section">
+                <p class="section-eyebrow">Career History</p>
+                <h2 class="section-heading">Experience</h2>
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-meta">
+                            <p class="timeline-date">2024 — Present</p>
+                            <p class="timeline-org">Mentally Fit Africa</p>
+                        </div>
+                        <div>
+                            <h3 class="timeline-role">Marketing & Business Development Specialist</h3>
+                            <p class="timeline-desc">Spearheaded B2B client acquisition through targeted LinkedIn outreach and high-engagement Mailchimp campaigns. Developed the organisation's content strategy, translating clinical wellness value propositions into accessible corporate narratives that accelerated partnership growth.</p>
+                            <div class="timeline-tags">
+                                <span class="tag-chip">Lead Generation</span>
+                                <span class="tag-chip">Email Marketing</span>
+                                <span class="tag-chip">Content Strategy</span>
+                                <span class="tag-chip">LinkedIn Outreach</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-meta">
+                            <p class="timeline-date">2022 — 2024</p>
+                            <p class="timeline-org">Merchants SA</p>
+                        </div>
+                        <div>
+                            <h3 class="timeline-role">Client Relations & CX Specialist</h3>
+                            <p class="timeline-desc">Managed complex stakeholder logistics and customer service delivery for Walmart's U.S. client portfolio. Maintained high first-contact resolution rates while building repeatable service frameworks that reduced escalation volumes and improved team efficiency.</p>
+                            <div class="timeline-tags">
+                                <span class="tag-chip">Stakeholder Management</span>
+                                <span class="tag-chip">CX Operations</span>
+                                <span class="tag-chip">Process Design</span>
+                                <span class="tag-chip">Walmart US</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- COMPETENCIES -->
+            <div class="cv-section">
+                <p class="section-eyebrow">Capabilities</p>
+                <h2 class="section-heading">Core Competencies</h2>
+                <div class="competency-grid">
+                    <div class="competency-group">
+                        <h4>Communications</h4>
+                        <ul>
+                            <li>Public Relations & Media</li>
+                            <li>Brand Identity Management</li>
+                            <li>Corporate Communications</li>
+                            <li>Stakeholder Engagement</li>
+                        </ul>
+                    </div>
+                    <div class="competency-group">
+                        <h4>Digital & Content</h4>
+                        <ul>
+                            <li>Graphic Design — Adobe & Canva</li>
+                            <li>Video Content Production</li>
+                            <li>Social Media Strategy</li>
+                            <li>Email Marketing (Mailchimp)</li>
+                        </ul>
+                    </div>
+                    <div class="competency-group">
+                        <h4>Strategy & Analytics</h4>
+                        <ul>
+                            <li>Integrated Marketing Planning</li>
+                            <li>Market Research & Analysis</li>
+                            <li>CRM & Lead Generation</li>
+                            <li>Campaign Performance Tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SKILLS -->
+            <div class="cv-section">
+                <p class="section-eyebrow">Proficiency</p>
+                <h2 class="section-heading">Technical Skills</h2>
+                <div class="skills-list">
+                    <div class="skill-row">
+                        <div class="skill-header"><span class="skill-name">Brand Strategy</span><span class="skill-pct">90%</span></div>
+                        <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-header"><span class="skill-name">Adobe Suite & Canva</span><span class="skill-pct">82%</span></div>
+                        <div class="skill-track"><div class="skill-fill" style="width:82%; animation-delay:0.1s"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-header"><span class="skill-name">Email & Content Marketing</span><span class="skill-pct">85%</span></div>
+                        <div class="skill-track"><div class="skill-fill" style="width:85%; animation-delay:0.2s"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-header"><span class="skill-name">Public Relations</span><span class="skill-pct">88%</span></div>
+                        <div class="skill-track"><div class="skill-fill" style="width:88%; animation-delay:0.3s"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-header"><span class="skill-name">Digital Strategy & Analytics</span><span class="skill-pct">78%</span></div>
+                        <div class="skill-track"><div class="skill-fill" style="width:78%; animation-delay:0.4s"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="cv-section">
+                <p class="section-eyebrow">Academic Background</p>
+                <h2 class="section-heading">Education</h2>
+                <div class="edu-item">
+                    <div class="edu-icon">◎</div>
+                    <div>
+                        <p class="edu-degree">BA in Integrated Organisational Communication</p>
+                        <p class="edu-inst">University of the Free State &nbsp;·&nbsp; Bloemfontein, South Africa</p>
+                        <p class="edu-year">Graduated 2023</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TICKER -->
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item">"Strategy is about making choices" <em>— Michael Porter</em></span>
+            <span class="ticker-item">"Know the customer so well the product sells itself" <em>— Peter Drucker</em></span>
+            <span class="ticker-item">"Innovation distinguishes the leader from the follower" <em>— Steve Jobs</em></span>
+            <span class="ticker-item">"Good design is good business" <em>— Thomas Watson Jr.</em></span>
+            <span class="ticker-item">"Marketing is no longer about the stuff you make but the stories you tell" <em>— Seth Godin</em></span>
+            <span class="ticker-item">"Strategy is about making choices" <em>— Michael Porter</em></span>
+            <span class="ticker-item">"Know the customer so well the product sells itself" <em>— Peter Drucker</em></span>
+            <span class="ticker-item">"Innovation distinguishes the leader from the follower" <em>— Steve Jobs</em></span>
+            <span class="ticker-item">"Good design is good business" <em>— Thomas Watson Jr.</em></span>
+            <span class="ticker-item">"Marketing is no longer about the stories you tell" <em>— Seth Godin</em></span>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="index.html" class="footer-brand"><strong>Samkelo</strong> Breakfast</a>
+        <p class="footer-copy">&copy; 2026 · Driven by Strategy · Powered by Creativity</p>
+        <ul class="footer-links">
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Email</a></li>
+            <li><a href="portfolio.html">Impact</a></li>
+        </ul>
+    </footer>
+
+    <!-- PASSWORD MODAL -->
+    <div class="modal-overlay" id="secureModal">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeSecure()">✕</button>
+            <div class="modal-icon">🔒</div>
+            <h3 class="modal-title">Restricted Access</h3>
+            <p class="modal-sub" id="secureModalSub">Academic Transcripts</p>
+            <input type="password" class="modal-input" id="passInput" placeholder="Enter passphrase" onkeydown="if(event.key==='Enter')checkPass()">
+            <p class="modal-error" id="passError"></p>
+            <button class="btn-primary" onclick="checkPass()" style="margin-bottom:0">Unlock Document</button>
+        </div>
+    </div>
+
+    <!-- PDF MODAL -->
+    <div class="pdf-modal" id="pdfModal" onclick="if(event.target===this)closePDF();">
+        <div class="pdf-toolbar">
+            <span class="pdf-title" id="pdfTitle">Document Preview</span>
+            <div style="display:flex;gap:10px;align-items:center;">
+                <a id="pdfDownload" href="" download
+                   style="background:none;border:1px solid var(--glass-border-bright);color:var(--petra-mid);padding:8px 20px;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;border-radius:2px;text-decoration:none;font-family:'Outfit',sans-serif;transition:background 0.3s,color 0.3s;">
+                   ↓ Download
+                </a>
+                <button class="pdf-close" onclick="closePDF()">✕ Close</button>
+            </div>
+        </div>
+        <iframe class="pdf-frame" id="pdfFrame" src=""></iframe>
+    </div>
+
+    <script>
+        let pendingSecureFile = '';
+
+        function openPDF(file, title) {
+            document.getElementById('pdfTitle').textContent = title;
+            document.getElementById('pdfFrame').src = file;
+            var dl = document.getElementById('pdfDownload');
+            if (dl) { dl.href = file; dl.setAttribute('download', title + '.pdf'); }
+            document.getElementById('pdfModal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePDF() {
+            document.getElementById('pdfModal').classList.remove('open');
+            document.getElementById('pdfFrame').src = '';
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePDF();
+                closeSecure();
+            }
+        });
+
+        function openSecure(file, title) {
+            pendingSecureFile = file;
+            document.getElementById('secureModalSub').textContent = title;
+            document.getElementById('passInput').value = '';
+            document.getElementById('passError').textContent = '';
+            document.getElementById('secureModal').classList.add('open');
+            setTimeout(() => document.getElementById('passInput').focus(), 100);
+        }
+
+        function closeSecure() {
+            document.getElementById('secureModal').classList.remove('open');
+        }
+
+        function checkPass() {
+            const val = document.getElementById('passInput').value;
+            if (val === '54321') {
+                closeSecure();
+                openPDF(pendingSecureFile, 'Academic Transcripts');
+            } else {
+                document.getElementById('passError').textContent = 'Incorrect passphrase. Try again.';
+                document.getElementById('passInput').value = '';
+                document.getElementById('passInput').focus();
+            }
+        }
+
+        // Close modals on overlay click
+        document.getElementById('secureModal').addEventListener('click', function(e) {
+            if (e.target === this) closeSecure();
+        });
+    </script>
+
+</body>
+</html>

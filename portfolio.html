@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selected campaigns, brand strategy work and case studies by Samkelo Breakfast.">
+    <meta name="author" content="Samkelo Breakfast">
+    <meta name="keywords" content="marketing strategist, corporate communications, brand strategy, Johannesburg, South Africa, digital marketing">
+    <!-- Open Graph — controls how the link looks when shared on LinkedIn/WhatsApp -->
+    <meta property="og:title" content="Impact | Samkelo Breakfast">
+    <meta property="og:description" content="Selected campaigns, brand strategy work and case studies by Samkelo Breakfast.">
+    <meta property="og:image" content="portfolio_SB.jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_ZA">
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Impact | Samkelo Breakfast">
+    <meta name="twitter:description" content="Selected campaigns, brand strategy work and case studies by Samkelo Breakfast.">
+    <title>Impact | Samkelo Breakfast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ═══════════════════════════════════════════
+           PETRA COLOR SYSTEM — same as index.html
+        ═══════════════════════════════════════════ */
+        :root {
+            --petra-void:      #1a0d0c;
+            --petra-deep:      #5C2018;
+            --petra-mid:       #BC4639;
+            --petra-dust:      #e8c8be;
+            --petra-parchment: #f8f0eb;
+            --petra-gold:      #c8903a;
+
+            --glass-light:     rgba(243, 224, 220, 0.07);
+            --glass-mid:       rgba(243, 224, 220, 0.12);
+            --glass-border:    rgba(243, 224, 220, 0.18);
+            --glass-border-bright: rgba(212, 165, 154, 0.38);
+
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body:    'Outfit', sans-serif;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--petra-void);
+            color: var(--petra-parchment);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Stone texture + strata — identical to homepage */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(26,13,12,0.66), rgba(92,32,24,0.55), rgba(26,13,12,0.70)
+                ),
+                url('portfolio_SB.jpeg') center center / cover no-repeat fixed;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Petra warmth veil + strata over the photo */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 20% 10%, rgba(188, 70, 57, 0.18) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 80% at 80% 90%, rgba(188, 70, 57, 0.12) 0%, transparent 60%),
+                repeating-linear-gradient(
+                    175deg,
+                    transparent,
+                    transparent 18px,
+                    rgba(212, 165, 154, 0.025) 18px,
+                    rgba(212, 165, 154, 0.025) 19px
+                );
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ═══════════════════════════════════════════
+           NAV — identical to homepage
+        ═══════════════════════════════════════════ */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 18px 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(26, 13, 12, 0.55);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-monogram {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: var(--petra-dust);
+            letter-spacing: 4px;
+            text-decoration: none;
+        }
+        .nav-monogram strong { color: var(--petra-mid); font-weight: 600; }
+
+        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links a {
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+            opacity: 0.7;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 1px;
+            background: var(--petra-mid);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover,
+        .nav-links a.active { color: var(--petra-parchment); opacity: 1; }
+        .nav-links a.active::after,
+        .nav-links a:hover::after { width: 100%; }
+
+        /* ═══════════════════════════════════════════
+           PAGE HERO
+        ═══════════════════════════════════════════ */
+        .page-hero {
+            position: relative;
+            z-index: 1;
+            padding: 160px 48px 80px;
+            text-align: center;
+        }
+
+        .page-hero-eyebrow {
+            font-size: 0.62rem;
+            font-weight: 300;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 300;
+            line-height: 1;
+            color: var(--petra-parchment);
+            margin-bottom: 8px;
+        }
+
+        .page-hero h1 em {
+            font-style: italic;
+            color: var(--petra-mid);
+        }
+
+        .page-hero-divider {
+            width: 50px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--petra-mid), transparent);
+            margin: 28px auto;
+        }
+
+        .page-hero-sub {
+            font-size: 0.72rem;
+            font-weight: 300;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+            opacity: 0.7;
+        }
+
+        /* ═══════════════════════════════════════════
+           PORTFOLIO GRID
+        ═══════════════════════════════════════════ */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 48px 120px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+        }
+
+        /* ═══════════════════════════════════════════
+           GLASS CARD
+        ═══════════════════════════════════════════ */
+        .glass-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border-radius: 4px;
+            overflow: hidden;
+            background: rgba(20, 10, 9, 0.58);
+            backdrop-filter: blur(24px) saturate(120%);
+            -webkit-backdrop-filter: blur(24px) saturate(120%);
+            border: 1px solid var(--glass-border);
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+                        border-color 0.3s,
+                        box-shadow 0.4s;
+        }
+
+        .glass-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(188, 70, 57, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s;
+            pointer-events: none;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--glass-border-bright);
+            box-shadow:
+                0 30px 60px rgba(26, 13, 12, 0.55),
+                inset 0 1px 0 rgba(243, 224, 220, 0.12);
+        }
+
+        .glass-card:hover::after { opacity: 1; }
+
+        /* Card image area */
+        .card-img {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 40%, rgba(26, 13, 12, 0.7) 100%);
+        }
+
+        .glass-card:hover .card-img {
+            transform: scale(1.04);
+            transition: transform 0.6s ease;
+        }
+
+        /* Card body */
+        .card-body {
+            padding: 36px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--petra-mid);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .card-title {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--petra-parchment);
+            margin-bottom: 14px;
+            line-height: 1.15;
+        }
+
+        .card-text {
+            font-size: 0.82rem;
+            font-weight: 300;
+            line-height: 1.75;
+            color: var(--petra-dust);
+            opacity: 0.85;
+            margin-bottom: 28px;
+            flex: 1;
+        }
+
+        /* Metrics */
+        .metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            padding-top: 20px;
+            border-top: 1px solid var(--glass-border);
+            margin-bottom: 28px;
+        }
+
+        .metric-item {
+            font-size: 0.58rem;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+            opacity: 0.6;
+        }
+
+        .metric-item span {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--petra-dust);
+            opacity: 1;
+            margin-top: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        /* CTA link */
+        .view-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 22px;
+            background: transparent;
+            border: 1px solid var(--glass-border-bright);
+            color: var(--petra-dust);
+            text-decoration: none;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .view-link span { transition: transform 0.3s; }
+
+        .view-link:hover {
+            background: var(--petra-mid);
+            border-color: var(--petra-mid);
+            color: var(--petra-parchment);
+        }
+
+        .view-link:hover span { transform: translateX(4px); }
+
+        /* ═══════════════════════════════════════════
+           FEATURED CARD — spans full width
+        ═══════════════════════════════════════════ */
+        .glass-card.featured {
+            grid-column: 1 / -1;
+            flex-direction: row;
+        }
+
+        .glass-card.featured .card-img {
+            width: 45%;
+            height: auto;
+            min-height: 300px;
+            flex-shrink: 0;
+        }
+
+        .glass-card.featured .card-body {
+            padding: 48px;
+        }
+
+        .glass-card.featured .card-title {
+            font-size: 2.5rem;
+        }
+
+        /* ═══════════════════════════════════════════
+           TICKER
+        ═══════════════════════════════════════════ */
+        .ticker-wrap {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
+            background: linear-gradient(90deg, var(--petra-deep), #3d1410, var(--petra-deep));
+            border-top: 1px solid rgba(188, 70, 57, 0.3);
+            border-bottom: 1px solid rgba(188, 70, 57, 0.3);
+        }
+
+        .ticker-wrap::before,
+        .ticker-wrap::after {
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0;
+            width: 120px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .ticker-wrap::before { left: 0;  background: linear-gradient(90deg,  var(--petra-deep), transparent); }
+        .ticker-wrap::after  { right: 0; background: linear-gradient(-90deg, var(--petra-deep), transparent); }
+
+        .ticker-move {
+            display: flex;
+            white-space: nowrap;
+            width: max-content;
+            animation: ticker-scroll 55s linear infinite;
+        }
+
+        .ticker-item {
+            padding: 0 70px;
+            font-size: 0.65rem;
+            font-weight: 300;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+        }
+
+        .ticker-item em {
+            color: var(--petra-mid);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        @keyframes ticker-scroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ═══════════════════════════════════════════
+           FOOTER
+        ═══════════════════════════════════════════ */
+        footer {
+            position: relative;
+            z-index: 1;
+            padding: 40px 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(26, 13, 12, 0.6);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .footer-brand {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            color: var(--petra-dust);
+            font-style: italic;
+            text-decoration: none;
+        }
+        .footer-brand strong { color: var(--petra-mid); font-weight: 600; font-style: normal; }
+
+        .footer-copy {
+            font-size: 0.6rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+            opacity: 0.5;
+        }
+
+        .footer-links { display: flex; gap: 32px; list-style: none; }
+        .footer-links a {
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+            text-decoration: none;
+            opacity: 0.5;
+            transition: opacity 0.3s, color 0.3s;
+        }
+        .footer-links a:hover { opacity: 1; color: var(--petra-mid); }
+
+        /* ═══════════════════════════════════════════
+           ENTRANCE ANIMATIONS
+        ═══════════════════════════════════════════ */
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .page-hero       { animation: fade-up 0.8s 0.1s both; }
+        .portfolio-grid  { animation: fade-up 0.9s 0.4s both; }
+
+        /* ═══════════════════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════════════════ */
+        @media (max-width: 900px) {
+            nav { padding: 16px 24px; }
+            .nav-links { gap: 24px; }
+            .container { padding: 20px 24px 80px; }
+            .page-hero { padding: 120px 24px 60px; }
+
+            .glass-card.featured { flex-direction: column; }
+            .glass-card.featured .card-img { width: 100%; height: 220px; }
+            .glass-card.featured .card-title { font-size: 1.9rem; }
+
+            footer { flex-direction: column; gap: 16px; text-align: center; padding: 28px 24px; }
+            .footer-links { justify-content: center; }
+        }
+
+        @media (max-width: 600px) {
+            .nav-links { display: none; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="index.html" class="nav-monogram"><strong>SB</strong> &nbsp;Breakfast</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Identity</a></li>
+            <li><a href="cv.html">Credentials</a></li>
+            <li><a href="portfolio.html" class="active">Impact</a></li>
+            <li><a href="contact.html">Connect</a></li>
+        </ul>
+    </nav>
+
+    <!-- PDF MODAL -->
+    <div id="pdfModal" style="display:none;position:fixed;inset:0;z-index:9000;background:rgba(26,13,12,0.96);backdrop-filter:blur(16px);flex-direction:column;">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 32px;background:rgba(26,13,12,0.9);border-bottom:1px solid var(--glass-border);flex-shrink:0;">
+            <span id="pdfTitle" style="font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--petra-dust);font-family:var(--font-body);"></span>
+            <div style="display:flex;gap:10px;align-items:center;">
+                <a id="pdfDownload" href="" download style="background:none;border:1px solid var(--glass-border-bright);color:var(--petra-mid);padding:8px 20px;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;border-radius:2px;text-decoration:none;font-family:var(--font-body);">↓ Download</a>
+                <button onclick="closePDF()" style="background:none;border:1px solid var(--glass-border);color:var(--petra-dust);padding:8px 18px;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;border-radius:2px;font-family:var(--font-body);">✕ Close</button>
+            </div>
+        </div>
+        <iframe id="pdfFrame" src="" style="flex:1;border:none;width:100%;"></iframe>
+    </div>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <span class="page-hero-eyebrow">Integrated Communications · Brand Strategy · Operational Excellence</span>
+        <h1>Strategic <em>Impact</em></h1>
+        <div class="page-hero-divider"></div>
+        <p class="page-hero-sub">Selected work &amp; case studies</p>
+    </div>
+
+    <!-- GRID -->
+    <div class="container">
+        <div class="portfolio-grid">
+
+            <!-- CARD 1 — Nando's (Featured) -->
+            <div class="glass-card featured">
+                <div class="card-img" style="background:linear-gradient(135deg,#7a1a10 0%,#c0392b 50%,#e74c3c 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+                    <span style="font-family:var(--font-display);font-size:3.5rem;font-weight:600;color:#fff;opacity:0.95;letter-spacing:-1px;">Nando's</span>
+                    <span style="font-size:0.6rem;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,0.6);font-family:var(--font-body);">Brand Culture Case Study</span>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">Featured · Brand Strategy & Culture Marketing</span>
+                    <h3 class="card-title">How Nando's Turns Flavour into Culture</h3>
+                    <p class="card-text">A deep-dive marketing analysis of how Nando's leverages its Portuguese-African heritage to build emotional resonance beyond product. From co-creation campaigns like <em>Sauce Your Flavour</em> to integrated digital activations — this study unpacks how the brand turns attention into engagement and engagement into loyalty, achieving a 12% uplift in sales.</p>
+                    <div class="metrics">
+                        <div class="metric-item">Strategy Focus<span>Cultural Marketing</span></div>
+                        <div class="metric-item">Key Result<span>12% Sales Uplift</span></div>
+                        <div class="metric-item">Approach<span>Integrated IMC</span></div>
+                        <div class="metric-item">Author<span>Samkelo Breakfast</span></div>
+                    </div>
+                    <button onclick="openPDF('Nandos_Case_Study_Elite_Portfolio.pdf','Nando\'s — Brand Culture Case Study')" class="view-link">Read Case Study <span>→</span></button>
+                </div>
+            </div>
+
+            <!-- CARD 2 — Woolworths -->
+            <div class="glass-card" style="grid-column: 1 / -1;">
+                <div style="display:flex;flex-direction:row;">
+                    <div class="card-img" style="width:40%;min-height:280px;flex-shrink:0;background:linear-gradient(135deg,#1a3a2a 0%,#2e7d52 50%,#27ae60 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+                        <span style="font-family:var(--font-display);font-size:2.8rem;font-weight:600;color:#fff;opacity:0.95;letter-spacing:-1px;">Woolworths</span>
+                        <span style="font-size:0.6rem;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,0.6);font-family:var(--font-body);">IC Strategy Article</span>
+                    </div>
+                    <div class="card-body" style="padding:48px;">
+                        <span class="card-tag">Integrated Communications · Retail Strategy</span>
+                        <h3 class="card-title" style="font-size:2.2rem;">Woolworths Holdings: Integrated Communication Strategy</h3>
+                        <p class="card-text">A comprehensive integrated communication strategy analysis for Woolworths Holdings Limited — South Africa's premium retailer since 1931. Covers SWOT analysis, competitive positioning against Pick n Pay and Spar, sustainability marketing through the <em>Good Business Journey</em>, and the <em>Uncompromising Excellence</em> campaign targeting a 7% sales uplift within three months on an R80,000 budget.</p>
+                        <div class="metrics">
+                            <div class="metric-item">Campaign<span>Uncompromising Excellence</span></div>
+                            <div class="metric-item">Target<span>7% Sales Uplift</span></div>
+                            <div class="metric-item">Budget<span>R80,000</span></div>
+                            <div class="metric-item">Framework<span>SWOT + IMC</span></div>
+                        </div>
+                        <button onclick="openPDF('Woolworths_IC_Article.pdf','Woolworths — Integrated Communication Strategy')" class="view-link">Read Article <span>→</span></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TICKER -->
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item">"Strategy is about making choices" <em>— Michael Porter</em></span>
+            <span class="ticker-item">"Know the customer so well the product sells itself" <em>— Peter Drucker</em></span>
+            <span class="ticker-item">"Innovation distinguishes the leader from the follower" <em>— Steve Jobs</em></span>
+            <span class="ticker-item">"Good design is good business" <em>— Thomas Watson Jr.</em></span>
+            <span class="ticker-item">"Marketing is no longer about the stuff you make but the stories you tell" <em>— Seth Godin</em></span>
+            <span class="ticker-item">"Strategy is about making choices" <em>— Michael Porter</em></span>
+            <span class="ticker-item">"Know the customer so well the product sells itself" <em>— Peter Drucker</em></span>
+            <span class="ticker-item">"Innovation distinguishes the leader from the follower" <em>— Steve Jobs</em></span>
+            <span class="ticker-item">"Good design is good business" <em>— Thomas Watson Jr.</em></span>
+            <span class="ticker-item">"Marketing is no longer about the stories you tell" <em>— Seth Godin</em></span>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="index.html" class="footer-brand"><strong>Samkelo</strong> Breakfast</a>
+        <p class="footer-copy">&copy; 2026 · Driven by Strategy · Powered by Creativity</p>
+        <ul class="footer-links">
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Email</a></li>
+            <li><a href="cv.html">CV</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function openPDF(file, title) {
+            var modal = document.getElementById('pdfModal');
+            document.getElementById('pdfTitle').textContent = title;
+            document.getElementById('pdfFrame').src = file;
+            var dl = document.getElementById('pdfDownload');
+            dl.href = file;
+            dl.setAttribute('download', title + '.pdf');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closePDF() {
+            document.getElementById('pdfModal').style.display = 'none';
+            document.getElementById('pdfFrame').src = '';
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closePDF();
+        });
+        document.getElementById('pdfModal').addEventListener('click', function(e) {
+            if (e.target === this) closePDF();
+        });
+    </script>
+
+</body>
+</html>

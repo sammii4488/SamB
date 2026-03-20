@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strategic marketing and corporate communications specialist based in Johannesburg. Brand strategy, digital marketing, and integrated campaigns.">
+    <meta name="author" content="Samkelo Breakfast">
+    <meta name="keywords" content="marketing strategist, corporate communications, brand strategy, Johannesburg, South Africa, digital marketing">
+    <!-- Open Graph — controls how the link looks when shared on LinkedIn/WhatsApp -->
+    <meta property="og:title" content="Samkelo Breakfast | Marketing & Corporate Communications">
+    <meta property="og:description" content="Strategic marketing and corporate communications specialist based in Johannesburg. Brand strategy, digital marketing, and integrated campaigns.">
+    <meta property="og:image" content="home_SB.jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_ZA">
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Samkelo Breakfast | Marketing & Corporate Communications">
+    <meta name="twitter:description" content="Strategic marketing and corporate communications specialist based in Johannesburg. Brand strategy, digital marketing, and integrated campaigns.">
+    <title>Samkelo Breakfast | Marketing & Corporate Communications</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ═══════════════════════════════════════════
+           PETRA COLOR SYSTEM
+        ═══════════════════════════════════════════ */
+        :root {
+            --petra-void:    #1a0d0c;   /* Near-black, warmth */
+            --petra-deep:    #5C2018;   /* Deep sandstone red */
+            --petra-mid:     #BC4639;   /* The treasury rose */
+            --petra-dust:    #D4A59A;   /* Sun-bleached stone */
+            --petra-parchment: #f8f0eb; /* Desert dawn cream */
+            --petra-gold:    #c8903a;   /* Torchlight gold */
+            
+            /* Glass layers */
+            --glass-light:   rgba(243, 224, 220, 0.08);
+            --glass-mid:     rgba(243, 224, 220, 0.13);
+            --glass-border:  rgba(243, 224, 220, 0.2);
+            --glass-border-bright: rgba(212, 165, 154, 0.4);
+            
+            /* Typography */
+            --font-display:  'Cormorant Garamond', serif;
+            --font-body:     'Outfit', sans-serif;
+        }
+
+        /* ═══════════════════════════════════════════
+           RESET & BASE
+        ═══════════════════════════════════════════ */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--petra-void);
+            color: var(--petra-parchment);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* ═══════════════════════════════════════════
+           ANIMATED STONE TEXTURE BACKGROUND
+        ═══════════════════════════════════════════ */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(26,13,12,0.72), rgba(92,32,24,0.62), rgba(26,13,12,0.75)
+                ),
+                url('home_SB.jpeg') center center / cover no-repeat fixed;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Petra warmth veil + strata over the photo */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 20% 10%, rgba(188, 70, 57, 0.18) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 80% at 80% 90%, rgba(188, 70, 57, 0.12) 0%, transparent 60%),
+                repeating-linear-gradient(
+                    175deg,
+                    transparent,
+                    transparent 18px,
+                    rgba(212, 165, 154, 0.025) 18px,
+                    rgba(212, 165, 154, 0.025) 19px
+                );
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ═══════════════════════════════════════════
+           LAYOUT
+        ═══════════════════════════════════════════ */
+        .site-wrapper {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ═══════════════════════════════════════════
+           NAV BAR — Ultra-thin glass strip
+        ═══════════════════════════════════════════ */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 18px 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(26, 13, 12, 0.5);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-monogram {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: var(--petra-dust);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .nav-monogram strong {
+            color: var(--petra-mid);
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--petra-mid);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover { color: var(--petra-parchment); }
+        .nav-links a:hover::after { width: 100%; }
+
+        /* ═══════════════════════════════════════════
+           HERO SECTION
+        ═══════════════════════════════════════════ */
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 120px 48px 80px;
+            position: relative;
+            text-align: center;
+        }
+
+        /* The glowing orb behind the title */
+        .hero-glow {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(188, 70, 57, 0.18) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: pulse-glow 6s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+            50%       { opacity: 1;   transform: translate(-50%, -50%) scale(1.1); }
+        }
+
+        .hero-eyebrow {
+            font-family: var(--font-body);
+            font-size: 0.65rem;
+            font-weight: 300;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+            margin-bottom: 24px;
+            opacity: 0;
+            animation: fade-up 0.8s 0.2s forwards;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(4rem, 10vw, 8rem);
+            font-weight: 300;
+            line-height: 0.95;
+            letter-spacing: -1px;
+            color: var(--petra-parchment);
+            margin-bottom: 8px;
+            opacity: 0;
+            animation: fade-up 0.9s 0.4s forwards;
+        }
+
+        .hero-title .name-first {
+            display: block;
+            font-style: italic;
+            color: var(--petra-dust);
+        }
+
+        .hero-title .name-last {
+            display: block;
+            color: var(--petra-mid);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .hero-divider {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--petra-mid), transparent);
+            margin: 32px auto;
+            opacity: 0;
+            animation: fade-up 0.8s 0.6s forwards;
+        }
+
+        .hero-tagline {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fade-up 0.8s 0.8s forwards;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            padding: 14px 36px;
+            border: 1px solid var(--petra-mid);
+            color: var(--petra-parchment);
+            text-decoration: none;
+            font-family: var(--font-body);
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            background: rgba(188, 70, 57, 0.08);
+            backdrop-filter: blur(12px);
+            transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            animation: fade-up 0.7s 1s forwards;
+            margin-bottom: 56px;
+        }
+
+        .hero-cta:hover {
+            background: rgba(188, 70, 57, 0.22);
+            border-color: var(--petra-parchment);
+            box-shadow: 0 0 24px rgba(188, 70, 57, 0.2);
+        }
+
+        /* ═══════════════════════════════════════════
+           PILLAR CARDS — The Glassmorphism Core
+        ═══════════════════════════════════════════ */
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+            opacity: 0;
+            animation: fade-up 1s 1s forwards;
+        }
+
+        .pillar-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 44px 36px;
+            text-decoration: none;
+            overflow: hidden;
+            border-radius: 4px;
+            
+            /* GLASSMORPHISM */
+            background: rgba(20, 10, 9, 0.58);
+            backdrop-filter: blur(24px) saturate(120%);
+            -webkit-backdrop-filter: blur(24px) saturate(120%);
+            border: 1px solid var(--glass-border);
+            
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+                        border-color 0.3s ease,
+                        background 0.3s ease,
+                        box-shadow 0.4s ease;
+        }
+
+        /* Top-left shimmer line */
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--petra-dust), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Inner glow on hover */
+        .pillar-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(188, 70, 57, 0.12) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s;
+            pointer-events: none;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--glass-border-bright);
+            background: var(--glass-mid);
+            box-shadow: 
+                0 30px 60px rgba(26, 13, 12, 0.5),
+                0 0 0 1px rgba(212, 165, 154, 0.1),
+                inset 0 1px 0 rgba(243, 224, 220, 0.15);
+        }
+
+        .pillar-card:hover::before { opacity: 1; }
+        .pillar-card:hover::after  { opacity: 1; }
+
+        .pillar-number {
+            font-family: var(--font-display);
+            font-size: 0.7rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: var(--petra-mid);
+            margin-bottom: 28px;
+            font-style: italic;
+        }
+
+        .pillar-icon {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 8px rgba(188, 70, 57, 0.5));
+        }
+
+        .pillar-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--petra-parchment);
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+            line-height: 1.1;
+            transition: color 0.3s;
+        }
+
+        .pillar-card:hover .pillar-title { color: #fff; }
+
+        .pillar-sub {
+            font-family: var(--font-body);
+            font-size: 0.62rem;
+            font-weight: 400;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+            opacity: 0.75;
+        }
+
+        .pillar-arrow {
+            position: absolute;
+            bottom: 36px;
+            right: 36px;
+            font-size: 1.2rem;
+            color: var(--petra-mid);
+            opacity: 0;
+            transform: translate(-4px, 4px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .pillar-card:hover .pillar-arrow {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        /* ═══════════════════════════════════════════
+           TICKER
+        ═══════════════════════════════════════════ */
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
+            background: linear-gradient(90deg, var(--petra-deep), #3d1410, var(--petra-deep));
+            border-top: 1px solid rgba(188, 70, 57, 0.3);
+            border-bottom: 1px solid rgba(188, 70, 57, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Fade edges */
+        .ticker-wrap::before,
+        .ticker-wrap::after {
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0;
+            width: 120px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .ticker-wrap::before {
+            left: 0;
+            background: linear-gradient(90deg, var(--petra-deep), transparent);
+        }
+        .ticker-wrap::after {
+            right: 0;
+            background: linear-gradient(-90deg, var(--petra-deep), transparent);
+        }
+
+        .ticker-move {
+            display: flex;
+            white-space: nowrap;
+            width: max-content;
+            animation: ticker-scroll 55s linear infinite;
+        }
+
+        .ticker-item {
+            padding: 0 70px;
+            font-family: var(--font-body);
+            font-size: 0.65rem;
+            font-weight: 300;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+        }
+
+        .ticker-item em {
+            color: var(--petra-mid);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        @keyframes ticker-scroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ═══════════════════════════════════════════
+           FOOTER
+        ═══════════════════════════════════════════ */
+        footer {
+            position: relative;
+            z-index: 1;
+            padding: 40px 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(26, 13, 12, 0.6);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .footer-brand {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            color: var(--petra-dust);
+            font-style: italic;
+        }
+
+        .footer-brand strong {
+            color: var(--petra-mid);
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .footer-copy {
+            font-size: 0.6rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+            opacity: 0.5;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+            text-decoration: none;
+            opacity: 0.5;
+            transition: opacity 0.3s, color 0.3s;
+        }
+
+        .footer-links a:hover { opacity: 1; color: var(--petra-mid); }
+
+        /* ═══════════════════════════════════════════
+           ANIMATIONS
+        ═══════════════════════════════════════════ */
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ═══════════════════════════════════════════
+           SCROLLING SIDE LABELS (decorative)
+        ═══════════════════════════════════════════ */
+        .side-label {
+            position: fixed;
+            top: 50%;
+            font-family: var(--font-body);
+            font-size: 0.55rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--petra-dust);
+            opacity: 0.25;
+            writing-mode: vertical-rl;
+            z-index: 2;
+            pointer-events: none;
+            transform: translateY(-50%);
+        }
+
+        .side-label-left  { left: 20px; }
+        .side-label-right { right: 20px; transform: translateY(-50%) rotate(180deg); }
+
+        /* ═══════════════════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════════════════ */
+        @media (max-width: 900px) {
+            nav { padding: 16px 24px; }
+            .nav-links { gap: 24px; }
+            .hero { padding: 100px 24px 60px; }
+            .pillars { 
+                grid-template-columns: 1fr; 
+                max-width: 420px;
+                gap: 14px;
+            }
+            .side-label { display: none; }
+            footer {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+                padding: 28px 24px;
+            }
+            .footer-links { justify-content: center; }
+        }
+
+        @media (max-width: 600px) {
+            .nav-links { display: none; }
+            .hero-title { font-size: 3.5rem; }
+            .pillar-card { padding: 32px 24px; }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Decorative side labels -->
+    <span class="side-label side-label-left">Johannesburg · ZA · 2026</span>
+    <span class="side-label side-label-right">Strategy · Communications · Brand</span>
+
+    <div class="site-wrapper">
+
+        <!-- NAV -->
+        <nav>
+            <div class="nav-monogram"><strong>SB</strong> &nbsp;Breakfast</div>
+            <ul class="nav-links">
+                <li><a href="cv.html">Profile</a></li>
+                <li><a href="portfolio.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-glow"></div>
+
+            <p class="hero-eyebrow">Marketing &amp; Corporate Communications</p>
+
+            <h1 class="hero-title">
+                <span class="name-first">Samkelo</span>
+                <span class="name-last">Breakfast</span>
+            </h1>
+
+            <div class="hero-divider"></div>
+
+            <p class="hero-tagline">Strategy is architecture &nbsp;·&nbsp; Creativity is the mortar</p>
+
+            <a href="cv.html" class="hero-cta">
+                View Full Profile &nbsp; →
+            </a>
+
+            <!-- PILLAR CARDS -->
+            <div class="pillars">
+
+                <a href="cv.html" class="pillar-card">
+                    <span class="pillar-number">01</span>
+                    <div class="pillar-icon">◈</div>
+                    <h3 class="pillar-title">Profile</h3>
+                    <span class="pillar-sub">Credentials &amp; Summary</span>
+                    <span class="pillar-arrow">→</span>
+                </a>
+
+                <a href="portfolio.html" class="pillar-card">
+                    <span class="pillar-number">02</span>
+                    <div class="pillar-icon">◉</div>
+                    <h3 class="pillar-title">Portfolio</h3>
+                    <span class="pillar-sub">Campaigns &amp; Strategy</span>
+                    <span class="pillar-arrow">→</span>
+                </a>
+
+                <a href="contact.html" class="pillar-card">
+                    <span class="pillar-number">03</span>
+                    <div class="pillar-icon">◎</div>
+                    <h3 class="pillar-title">Connect</h3>
+                    <span class="pillar-sub">Direct Inquiries</span>
+                    <span class="pillar-arrow">→</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- TICKER -->
+        <div class="ticker-wrap">
+            <div class="ticker-move">
+                <span class="ticker-item">"Strategy is about making choices" <em>— Michael Porter</em></span>
+                <span class="ticker-item">"Know the customer so well the product sells itself" <em>— Peter Drucker</em></span>
+                <span class="ticker-item">"Innovation distinguishes the leader from the follower" <em>— Steve Jobs</em></span>
+                <span class="ticker-item">"Good design is good business" <em>— Thomas Watson Jr.</em></span>
+                <span class="ticker-item">"Marketing is no longer about the stuff you make but the stories you tell" <em>— Seth Godin</em></span>
+                <span class="ticker-item">"Strategy is about making choices" <em>— Michael Porter</em></span>
+                <span class="ticker-item">"Know the customer so well the product sells itself" <em>— Peter Drucker</em></span>
+                <span class="ticker-item">"Innovation distinguishes the leader from the follower" <em>— Steve Jobs</em></span>
+                <span class="ticker-item">"Good design is good business" <em>— Thomas Watson Jr.</em></span>
+                <span class="ticker-item">"Marketing is no longer about the stuff you make but the stories you tell" <em>— Seth Godin</em></span>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-brand"><strong>Samkelo</strong> Breakfast</div>
+            <p class="footer-copy">&copy; 2026 · Driven by Strategy · Powered by Creativity</p>
+            <ul class="footer-links">
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Email</a></li>
+                <li><a href="#">CV</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Subtle parallax tilt on hero glow -->
+    <script>
+        const glow = document.querySelector('.hero-glow');
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth  - 0.5) * 30;
+            const y = (e.clientY / window.innerHeight - 0.5) * 30;
+            glow.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+        });
+    </script>
+
+</body>
+</html>
